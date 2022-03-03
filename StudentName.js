@@ -119,8 +119,9 @@ let wordArrayA = ["hola", "¿" ,"cómo", "estás", "?"];
 let wordArrayB = ["te", "ves" ,"igual", "te", "ves", "igual"];
 
 function arrayJoiner(listA, listB) {
- // :)
+ return listA.concat(listB)
 }
+console.log(arrayJoiner(['a','mi','me','gusta','la','parranda'],['a','mi','me','gustan','las','mujeres']));
 
 
 /*Dado un arreglo de strings indicar qué posiciones del arreglo

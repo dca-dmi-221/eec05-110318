@@ -15,7 +15,7 @@ function wordCutter(words) {
    
 }
 
-console.log(wordCutter(20));
+console.log(wordCutter(24));
 
 
 
@@ -27,22 +27,26 @@ console.log(wordCutter(20));
 ahí contenido, debe soportar mayúsculas y minúsculas sin importar
 la variación, es lo mismo Carro, CARRO o carro.*/
 
-let testTargetWordA = "Sabrosura";
-let testTargetWordB = "Sazón";
-let testTargetWordC = "Tempurado";
-let testWordsList = [
-    "Sabr0sura",
-    "Gozadera",
-    "ritmo",
-    "TEMPURADO",
-    "SAZON",
-    "Chevere",
-    "Meneo",
-];
+
 
 // pruebe para cada palabra A, B y C
 function wordSearcherIgnoreCase(targetWord, wordsList) {
-   // :)
+    let testTargetWordA = "Sabrosura";
+    let testTargetWordB = "Sazón";
+    let testTargetWordC = "Tempurado";
+    let testWordsList = [
+        "Sabr0sura",
+        "Gozadera",
+        "ritmo",
+        "TEMPURADO",
+        "SAZON",
+        "Chevere",
+        "Meneo",
+    ];
+
+
+
+    console.log(wordSearcherIgnoreCase('A','Ayuda,Pelea,Tatakae'))
 }
 
 
@@ -74,19 +78,32 @@ let onVerificationWordA = "reconocer";
 let onVerificationWordB = "querer";
 let onVerificationWordC = "Gomosos";
 let onVerificationWordD = "Somos";
-
 function palindromeVerifier(word) {
-   // :)
+   
+return word.split('').reverse().join('') === word;
+
+
 }
+
+console.log(palindromeVerifier(onVerificationWordA))
+console.log(palindromeVerifier(onVerificationWordB))
+console.log(palindromeVerifier(onVerificationWordC))
+console.log(palindromeVerifier(onVerificationWordD))
 
 
 /*Dado un objeto que contiene una lista de palabras contar el
 número de letras vocales y consonantes y retornarlo en un arreglo de 2 posiciones.*/
-let containerTestObject = {
-    list:["Cumbamba", "Oreja", "Nariz", "Ojo", "Lengua", "Diente"]
-}
+
 function lettersCounter(objectContainer) {
-   // :)
+    let containerTestObject = {
+        list:["Cumbamba", "Oreja", "Nariz", "Ojo", "Lengua", "Diente"]
+    }
+    let counter = 0;
+
+    
+    let container = containerTestObject.list.indexOf(['']);
+
+    console.log(container);
 }
 
 

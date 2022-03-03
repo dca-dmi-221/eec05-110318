@@ -98,12 +98,19 @@ function lettersCounter(objectContainer) {
     let containerTestObject = {
         list:["Cumbamba", "Oreja", "Nariz", "Ojo", "Lengua", "Diente"]
     }
+
+    let result = containerTestObject.list.split('');
+    console.log(result);
+
+
     let counter = 0;
-
-    
-    let container = containerTestObject.list.indexOf(['']);
-
-    console.log(container);
+    for (let i = 0; i < objectContainer.length; i++) {
+        if(containerTestObject.indexOf(objectContainer[i]) !== -1){
+            counter +=1;
+        }
+        console.log(counter);
+        return counter;
+    }
 }
 
 

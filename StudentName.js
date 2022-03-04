@@ -43,13 +43,15 @@ function wordSearcherIgnoreCase(targetWord, wordsList) {
         "Chevere",
         "Meneo",
     ];
+testTargetWordA.includes(targetWord)
+testTargetWordB.includes(targetWord)
+testTargetWordC.includes(targetWord)
+testWordsList.includes(wordsList)
 
-
-
-    console.log(wordSearcherIgnoreCase('A','Ayuda,Pelea,Tatakae'))
+    
 }
 
-
+console.log(wordSearcherIgnoreCase('a',['Sabrosura','Gozadera','Ritmo','Tempurado']));
 
 /*Dado un arreglo de strings, retornar la palabra más larga,
 la más corta y el tamaño promedio, el arreglo debe ser
@@ -127,13 +129,29 @@ console.log(arrayJoiner(['a','mi','me','gusta','la','parranda'],['a','mi','me','
 /*Dado un arreglo de strings indicar qué posiciones del arreglo
 son anagramas de una palabra base (recibida como parámetro), retorne las posiciones en un arreglo.*/
 
+
 let testWordToExplore = "amar";
 let wordsToVerify = ["amar", "arma", "rana" , "mara", "rama", "roma", "amor", "ramon", "omar"];
 
 function anagramVerifier(wordToExplore, listOfWords) {
-   // :)
-}
+    wordToExplore = wordToExplore.split('')
+    listOfWords = listOfWords.split('');
 
+    wordToExplore = wordToExplore.sort('')
+    listOfWords = listOfWords.sort('')
+
+    wordToExplore = wordToExplore.join('')
+    listOfWords = listOfWords.join('')
+
+    if(wordToExplore===listOfWords){
+        return true;
+    }else{
+        return false;
+    }
+
+  
+}
+//console.log(anagramVerifier(testWordToExplore,...wordsToVerify))
 /*Dado un objeto que contiene 2 arreglos, retornar un objeto con 1
 arreglo que contiene las palabras sin vocales.*/
 
@@ -148,13 +166,27 @@ function vocalsRemoverFromObject(objectMultiContainer) {
 
 console.log(vocalsRemoverFromObject(testObjMultiContainer));
 
+
+
+
 /*Dado un arreglo de palabras reemplazar la última vocal por una x y retornar dicho arreglo.*/
 
 let someWordsToTest = ["compañeros", "estudiantes", "señores", "amigos", "graduandos", "artistas", "universitarios"];
 
 function lastVocalReplacer(words) {
-    // :)
+    let replaceWords = words;
+    return replaceWords.replace(/[aeiou]/gi,'x')
 }
+console.log(lastVocalReplacer("compañeros"));
+console.log(lastVocalReplacer("estudiantes"));
+console.log(lastVocalReplacer("señores"));
+console.log(lastVocalReplacer("amigos"));
+console.log(lastVocalReplacer("graduandos"));
+console.log(lastVocalReplacer("artistas"));
+console.log(lastVocalReplacer("universitarios"));
+
+
+
 
 
 /*Dada una lista de palabras verificar si alguna de las palabras es la
